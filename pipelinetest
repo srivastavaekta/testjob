@@ -11,4 +11,10 @@ properties([parameters
 	        	choice(choices: ['NFS', 'S3-REDHAT-CEPH'], description: '', name: 'STORAGES')
 		])
 	])
+	stage('Check parameters')
+		{
+			echo "TVAULTBUILD_NUMBER : "+ TVAULTBUILD_NUMBER +"\nLAUNCH_NEW_OPENSTACK : "+ LAUNCH_NEW_OPENSTACK +\
+			"\nLAUNCH_NEW_TVM : "+ LAUNCH_NEW_TVM +"\nMASTER_CONFIG : "+ MASTER_CONFIG +"\nGIT_BRANCH_NAME : "+ GIT_BRANCH_NAME +\
+			"\nNOVA_BACKEND : "+ NOVA_BACKEND +"\nSTORAGES : "+ STORAGES
+		}
 
