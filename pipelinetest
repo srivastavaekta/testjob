@@ -1,2 +1,14 @@
 x="hello"
 echo "$x"
+properties([parameters
+		([
+			choice(choices: ['No','Yes'], description: 'Select Yes to create new openstack using Vagrant', name: 'LAUNCH_NEW_OPENSTACK'),
+			choice(choices: ['Yes', 'No'], description: 'Select Yes to launch new TVault VM(s)', name: 'LAUNCH_NEW_TVM'),
+			choice(choices: ['Yes', 'No'], description: 'Select Yes to run tvault configuration and trilio component deployment steps', name: 'MASTER_CONFIG'),
+	        	string(defaultValue: 'master', description: 'Automation repo branch to be checked out', name: 'GIT_BRANCH_NAME', trim: false), 
+        		string(defaultValue: 'Default', description: 'TVO Build number', name: 'TVAULTBUILD_NUMBER', trim: false), 
+            		choice(choices: ['localdisk', 'ceph'], description: 'Nova backend for the openstack', name: 'NOVA_BACKEND'),
+	        	choice(choices: ['NFS', 'S3-REDHAT-CEPH'], description: '', name: 'STORAGES')
+		])
+	])
+
