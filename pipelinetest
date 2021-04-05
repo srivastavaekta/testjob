@@ -20,6 +20,6 @@ properties([parameters
 		}
 
 def MAIL_ADD='ekta.srivastava@trilio.io'
-echo ${JOB_BASE_NAME}
+echo "${JOB_BASE_NAME}"
 }
  
