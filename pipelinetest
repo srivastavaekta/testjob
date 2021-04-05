@@ -1,3 +1,4 @@
+node('Automation_7_2'){
 x="hello"
 echo "$x"
 properties([parameters
@@ -18,3 +19,4 @@ properties([parameters
 			"\nNOVA_BACKEND : "+ NOVA_BACKEND +"\nSTORAGES : "+ STORAGES
 		}
 
+}
