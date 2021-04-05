@@ -1,0 +1,3 @@
+echo hello
+x=$(echo hello)
+echo "$x",world!
